@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p5Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1228" />
+      <stop offset="100%" stop-color="#060914" />
+    </linearGradient>
+    <linearGradient id="p5Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#p5Bg)" />
+
+  <!-- Browser Window Frame -->
+  <rect x="70" y="50" width="460" height="300" rx="14" fill="#141c3a" stroke="url(#p5Grad)" stroke-width="2" />
+  
+  <!-- Browser Header Bar -->
+  <path d="M70 64 C70 56, 76 50, 84 50 L516 50 C524 50, 530 56, 530 64 L530 84 L70 84 Z" fill="#0f162e" />
+  <circle cx="95" cy="67" r="5" fill="#ef4444" />
+  <circle cx="112" cy="67" r="5" fill="#f59e0b" />
+  <circle cx="129" cy="67" r="5" fill="#10b981" />
+  <rect x="160" y="58" width="220" height="18" rx="6" fill="#1e294b" />
+
+  <!-- Browser Web Page Content -->
+  <!-- Nav Bar -->
+  <rect x="95" y="105" width="40" height="14" rx="4" fill="url(#p5Grad)" />
+  <rect x="380" y="108" width="30" height="8" rx="2" fill="#94a3b8" />
+  <rect x="420" y="108" width="30" height="8" rx="2" fill="#94a3b8" />
+  <rect x="460" y="105" width="45" height="14" rx="7" fill="#8b5cf6" />
+
+  <!-- Hero Banner on Page -->
+  <rect x="95" y="140" width="230" height="18" rx="4" fill="#ffffff" />
+  <rect x="95" y="166" width="180" height="12" rx="3" fill="#38bdf8" />
+  <rect x="95" y="188" width="200" height="8" rx="2" fill="#64748b" />
+  <rect x="95" y="202" width="150" height="8" rx="2" fill="#64748b" />
+  <rect x="95" y="225" width="70" height="22" rx="11" fill="url(#p5Grad)" />
+
+  <!-- Dashboard Graphic / Chart Right -->
+  <rect x="350" y="140" width="155" height="135" rx="10" fill="#1b2448" />
+  <!-- Chart Line -->
+  <path d="M370 240 Q 400 180, 430 210 T 485 160" fill="none" stroke="#00d2ff" stroke-width="4" stroke-linecap="round" />
+  <circle cx="485" cy="160" r="5" fill="#a855f7" />
+
+  <!-- Floating Metric Cards -->
+  <rect x="95" y="270" width="125" height="55" rx="8" fill="#1b2448" />
+  <circle cx="120" cy="298" r="14" fill="#8b5cf6" />
+  <rect x="145" y="288" width="60" height="8" rx="2" fill="#ffffff" />
+  <rect x="145" y="302" width="40" height="6" rx="2" fill="#38bdf8" />
+
+  <rect x="235" y="270" width="125" height="55" rx="8" fill="#1b2448" />
+  <circle cx="260" cy="298" r="14" fill="#00d2ff" />
+  <rect x="285" y="288" width="60" height="8" rx="2" fill="#ffffff" />
+  <rect x="285" y="302" width="40" height="6" rx="2" fill="#a855f7" />
+</svg>

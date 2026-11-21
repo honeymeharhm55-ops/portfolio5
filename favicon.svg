@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="iconBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0e1730" />
+      <stop offset="100%" stop-color="#060913" />
+    </radialGradient>
+
+    <linearGradient id="iconKGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066ff" />
+      <stop offset="50%" stop-color="#0099ff" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+
+    <linearGradient id="iconOrbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="60%" stop-color="#00e5b0" />
+      <stop offset="100%" stop-color="#00e676" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded squircle with subtle border -->
+  <rect width="128" height="128" rx="28" fill="url(#iconBg)" />
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="none" stroke="rgba(0, 210, 255, 0.4)" stroke-width="2" />
+
+  <g transform="translate(14, 14) scale(0.48)">
+    <!-- Back orbit -->
+    <path d="M 45 130 C 20 150, 25 170, 60 170 C 110 170, 175 110, 205 60 C 215 45, 210 35, 195 38" 
+          fill="none" stroke="url(#iconOrbitGrad)" stroke-width="9" stroke-linecap="round" opacity="0.85" />
+
+    <!-- Digital Pixels -->
+    <rect x="25" y="65" width="16" height="16" rx="3" fill="#00e5ff" />
+    <rect x="44" y="52" width="16" height="16" rx="3" fill="#00c8ff" />
+    <rect x="44" y="71" width="16" height="16" rx="3" fill="#0077ff" />
+    <rect x="48" y="93" width="14" height="14" rx="2.5" fill="#0055ff" />
+
+    <!-- K vertical stem -->
+    <rect x="68" y="42" width="24" height="106" rx="5" fill="url(#iconKGrad)" />
+
+    <!-- K top arm -->
+    <path d="M 92 88 L 148 42 C 153 38, 162 42, 162 49 L 162 65 C 162 70, 158 75, 153 79 L 112 110 Z" 
+          fill="url(#iconKGrad)" />
+
+    <!-- K bottom leg -->
+    <path d="M 104 100 L 158 142 C 163 146, 165 152, 161 156 L 150 162 C 145 165, 138 163, 134 159 L 85 118 Z" 
+          fill="url(#iconKGrad)" />
+
+    <!-- Front orbit -->
+    <path d="M 18 135 C 10 115, 30 90, 80 75 C 130 60, 185 55, 202 70 C 208 76, 205 85, 190 92 C 165 104, 115 125, 75 138 C 50 146, 26 148, 18 135 Z" 
+          fill="url(#iconOrbitGrad)" />
+
+    <circle cx="204" cy="55" r="5" fill="#00e676" />
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p5BgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111634" />
+      <stop offset="100%" stop-color="#060914" />
+    </linearGradient>
+
+    <linearGradient id="cardHolo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2dd4bf" />
+    </linearGradient>
+
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.75" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#p5BgGrad)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="180" r="140" fill="#8b5cf6" opacity="0.18" />
+  <circle cx="420" cy="220" r="140" fill="#00d2ff" opacity="0.18" />
+
+  <!-- Perspective Mockup: 2 Floating Luxury Business Cards -->
+
+  <!-- Card 1: Front Side (Angled Left) -->
+  <g transform="translate(80, 80) rotate(-8)" filter="url(#cardShadow)">
+    <rect width="250" height="150" rx="10" fill="#141c3c" stroke="url(#cardHolo)" stroke-width="2" />
+    <!-- Subtle Diagonal Foil Line -->
+    <line x1="0" y1="150" x2="250" y2="0" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+    <!-- Embossed Brand Mark -->
+    <polygon points="125,45 150,85 100,85" fill="none" stroke="url(#cardHolo)" stroke-width="5" />
+    <circle cx="125" cy="70" r="7" fill="#00d2ff" />
+    <text x="125" y="112" font-family="'Poppins', sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="4">VERITAS</text>
+    <text x="125" y="125" font-family="'Poppins', sans-serif" font-size="7" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="2">CREATIVE CONSULTING</text>
+  </g>
+
+  <!-- Card 2: Back Side (Angled Right, Overlapping) -->
+  <g transform="translate(250, 160) rotate(6)" filter="url(#cardShadow)">
+    <rect width="250" height="150" rx="10" fill="#0d142c" stroke="url(#cardHolo)" stroke-width="2" />
+    <!-- Top Bar -->
+    <rect x="20" y="22" width="40" height="6" rx="3" fill="url(#cardHolo)" />
+    <!-- Name and Title -->
+    <text x="20" y="48" font-family="'Poppins', sans-serif" font-size="14" font-weight="800" fill="#ffffff">KHURAM LATIF</text>
+    <text x="20" y="60" font-family="'Poppins', sans-serif" font-size="8" font-weight="600" fill="#38bdf8" letter-spacing="1">CREATIVE GRAPHIC DESIGNER</text>
+    
+    <line x1="20" y1="72" x2="160" y2="72" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+
+    <!-- Contact Info Lines -->
+    <text x="20" y="90" font-family="'Poppins', sans-serif" font-size="8" font-weight="500" fill="#cbd5e1">khuram.latif@example.com</text>
+    <text x="20" y="104" font-family="'Poppins', sans-serif" font-size="8" font-weight="500" fill="#cbd5e1">+1 (555) 019-2834</text>
+    <text x="20" y="118" font-family="'Poppins', sans-serif" font-size="8" font-weight="500" fill="#cbd5e1">www.khuramdesigns.com</text>
+
+    <!-- QR Code Mockup Right -->
+    <g transform="translate(185, 82)">
+      <rect width="46" height="46" rx="4" fill="#ffffff" />
+      <rect x="4" y="4" width="14" height="14" fill="#000000" />
+      <rect x="28" y="4" width="14" height="14" fill="#000000" />
+      <rect x="4" y="28" width="14" height="14" fill="#000000" />
+      <rect x="7" y="7" width="8" height="8" fill="#ffffff" />
+      <rect x="31" y="7" width="8" height="8" fill="#ffffff" />
+      <rect x="7" y="31" width="8" height="8" fill="#ffffff" />
+      <rect x="22" y="22" width="6" height="6" fill="#8b5cf6" />
+    </g>
+  </g>
+
+  <!-- Badge Top Left -->
+  <rect x="25" y="25" width="205" height="30" rx="15" fill="rgba(19, 27, 52, 0.85)" stroke="url(#cardHolo)" stroke-width="1" />
+  <text x="127" y="44" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">PROJECT 05: BUSINESS CARD</text>
+</svg>

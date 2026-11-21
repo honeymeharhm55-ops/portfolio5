@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="k.bitlogics Studio Portfolio - Explore curated brand identity, vector logo design, commercial product ads, and web UI projects by Khuram Latif.">
+    <meta name="keywords" content="Design Portfolio, Logo Design Gallery, Brand Identity Showcase, UI Design Portfolio, Khuram Latif, k.bitlogics">
+    <meta name="author" content="Khuram Latif">
+    
+    <!-- Open Graph / SEO Meta Tags -->
+    <meta property="og:title" content="Portfolio Gallery | k.bitlogics Creative Studio - Khuram Latif">
+    <meta property="og:description" content="Explore selected client projects, brand identity systems, social campaigns, and web interfaces crafted by k.bitlogics Creative Studio.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/kbitlogics-logo.jpg">
+
+    <title>Portfolio Gallery | k.bitlogics Creative Studio - Khuram Latif</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "k.bitlogics Creative Studio Portfolio",
+      "description": "Selected client projects across logo design, corporate branding, social media marketing, product advertising, and web UI/UX.",
+      "publisher": {
+        "@type": "ProfessionalService",
+        "name": "k.bitlogics Creative Studio",
+        "founder": {
+          "@type": "Person",
+          "name": "Khuram Latif"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="k.bitlogics Creative Studio Homepage">
+                <img src="images/kbitlogics-icon.svg" alt="k.bitlogics Logo" class="logo-icon-img" width="38" height="38">
+                <span class="logo-brand"><span class="logo-k">k.</span><span class="logo-bit">bit</span><span class="logo-logics">logics</span></span>
+                <span class="logo-studio-tag">Studio</span>
+            </a>
+
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Studio</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li class="nav-item"><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="index.html#booking" class="nav-link">Book Call</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-action">
+                    <a href="contact.html" class="btn btn-primary">Start a Project</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Hero Banner -->
+        <section class="page-hero-section">
+            <div class="container">
+                <div class="page-hero-content">
+                    <span class="hero-badge-pill">
+                        <span class="pulse-indicator" aria-hidden="true"></span>
+                        <span class="hero-tagline-text">Curated Studio Showcase</span>
+                    </span>
+                    <h1 class="page-hero-title">Portfolio &amp; Selected Works</h1>
+                    <p class="page-hero-subtitle">
+                        Explore our featured brand identity systems, vector logo marks, digital marketing visuals, commercial advertising posters, and responsive web user interfaces.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gallery Section -->
+        <section style="padding: 60px 0 100px;">
+            <div class="container">
+                <!-- Gallery Controls Toolbar -->
+                <div class="gallery-controls-toolbar">
+                    <div class="project-filters" role="tablist" aria-label="Filter design projects">
+                        <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
+                        <button type="button" class="filter-btn" data-filter="logo-design" role="tab" aria-selected="false">Logo Design</button>
+                        <button type="button" class="filter-btn" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+                        <button type="button" class="filter-btn" data-filter="social-media" role="tab" aria-selected="false">Social Media</button>
+                        <button type="button" class="filter-btn" data-filter="posters-ads" role="tab" aria-selected="false">Posters &amp; Ads</button>
+                        <button type="button" class="filter-btn" data-filter="brochures-print" role="tab" aria-selected="false">Brochures &amp; Print</button>
+                        <button type="button" class="filter-btn" data-filter="business-cards" role="tab" aria-selected="false">Business Cards</button>
+                        <button type="button" class="filter-btn" data-filter="packaging" role="tab" aria-selected="false">Packaging</button>
+                        <button type="button" class="filter-btn" data-filter="website-ui" role="tab" aria-selected="false">Website UI</button>
+                        <button type="button" class="filter-btn" data-filter="presentation-deck" role="tab" aria-selected="false">4K Slide Deck</button>
+                    </div>
+
+                    <div class="gallery-search-box">
+                        <span class="search-icon" aria-hidden="true">&#128269;</span>
+                        <input type="text" id="project-search-input" class="gallery-search-input" placeholder="Search by title, category, or tool..." aria-label="Search projects">
+                        <button type="button" id="clear-search-btn" class="search-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
+                    </div>
+                </div>
+
+                <!-- No Results Alert -->
+                <div id="no-projects-found" class="no-projects-alert" style="display: none;" role="status">
+                    <span class="alert-icon">&#128270;</span>
+                    <h3 class="alert-title">No Matching Projects Found</h3>
+                    <p class="alert-desc">We couldn't find any projects matching your search criteria. Try a different keyword or reset filters.</p>
+                    <button type="button" id="reset-gallery-btn" class="btn btn-secondary">Reset Gallery &amp; Show All</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: Logo Design (k.bitlogics Showcase) -->
+                    <article class="project-card" data-category="logo-design branding" data-title="k.bitlogics Brand Identity &amp; Logo Design" data-tags="Vector, Logo, k.bitlogics, Illustrator, Branding, Agency" data-case-study="case-study-kbitlogics-logo.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/kbitlogics-logo.jpg" alt="k.bitlogics Brand Identity &amp; Logo Design by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Logo Design">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Logo Design</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">k.bitlogics Brand Identity</h2>
+                            <p class="project-description">
+                                Official studio brand identity and vector logo mark crafted for k.bitlogics, featuring dynamic orbital geometry, digital pixel cubes, and scalable modern typography.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Logo Design">&#128269; Preview</button>
+                                <a href="case-study-kbitlogics-logo.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: WALKO Dairy Milk Brand Identity -->
+                    <article class="project-card" data-category="branding packaging" data-title="WALKO Dairy Milk Brand Identity" data-tags="Branding, Identity, WALKO, Dairy Milk, Nutrition, Mockup, Illustrator" data-case-study="case-study-brand-identity.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/walko-web.jpg" alt="WALKO Dairy Milk Complete Brand Identity System by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom WALKO Brand Identity">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Branding</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">WALKO Brand Identity</h2>
+                            <p class="project-description">
+                                Complete brand identity system for WALKO Dairy Milk tailored for health-conscious consumers, including custom vectormark, natural palette, and commercial packaging suite.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview WALKO Brand Identity">&#128269; Preview</button>
+                                <a href="case-study-brand-identity.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Khuram Latif Custom Logofolio -->
+                    <article class="project-card" data-category="logo-design" data-title="Custom Logofolio Collection" data-tags="Logofolio, Vector, ARTSY Cafe, Karma Traders, Mamma Mia, Macdonald Recreation, Illustrator" data-case-study="case-study-kbitlogics-logo.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/5.jpg" alt="Khuram Latif Custom Logofolio Suite" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Logofolio Collection">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Logo Design</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Custom Logofolio Suite</h2>
+                            <p class="project-description">
+                                A curated collection of bespoke vector logos crafted through thoughtful conceptualization, including ARTSY Cafe, Autobio, Karma Traders, Macdonald Recreation, Mamma Mia, and Space Logo.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Logofolio">&#128269; Preview</button>
+                                <a href="case-study-kbitlogics-logo.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: ARTSY Cafe Social Media Campaign & Mobile Phone Mockup -->
+                    <article class="project-card" data-category="social-media" data-title="ARTSY Cafe Social Media &amp; Mobile Mockup" data-tags="Social Media, Instagram, Mobile Mockup, ARTSY Cafe, Photoshop, Marketing" data-case-study="case-study-social-media.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/instagram-phone-mockup-3-web.jpg" alt="ARTSY Cafe Social Media Campaign on Smartphone Mockup by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom ARTSY Cafe Social Media">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Social Media Design</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">ARTSY Cafe Social Mockup</h2>
+                            <p class="project-description">
+                                Engaging visual content and promotional campaign creatives crafted for social networks, presented on modern smartphone mockups for @ARTSY_Cafe.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview ARTSY Cafe Social Media">&#128269; Preview</button>
+                                <a href="case-study-social-media.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Walko Roll-Up Standee & Exhibition Poster -->
+                    <article class="project-card" data-category="posters-ads brochures-print" data-title="Walko Promotional Standee &amp; Poster" data-tags="Poster, Standee, Roll-Up Banner, Exhibition, Print Media, WALKO, Illustrator" data-case-study="case-study-product-ad.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/poster_stand_mockup_2-web.jpg" alt="Walko Promotional Standee and Exhibition Poster Mockup by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Walko Standee">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Posters &amp; Print</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Walko Roll-Up Standee Poster</h2>
+                            <p class="project-description">
+                                High-visibility promotional roll-up standee banner and exhibition poster designed for retail environments and outdoor trade presentations with crisp commercial typography.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Walko Standee">&#128269; Preview</button>
+                                <a href="case-study-product-ad.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Corporate Trifold & Bifold Brochure Design -->
+                    <article class="project-card" data-category="brochures-print" data-title="Corporate Brochure &amp; Print Layouts" data-tags="Brochure, Print Media, Layout, Bifold, Trifold, CMYK, Editorial, InDesign" data-case-study="case-study-business-card.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/17.jpg" alt="Corporate Brochure Design Mockup and Print Collateral by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Corporate Brochure">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Brochures &amp; Print</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Corporate Brochure Design</h2>
+                            <p class="project-description">
+                                Multi-page marketing brochures engineered with meticulous typographic hierarchy, structured column grids, and print-ready CMYK offset separation specifications.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Corporate Brochure">&#128269; Preview</button>
+                                <a href="case-study-business-card.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: Executive Luxury Business Cards & Stationery -->
+                    <article class="project-card" data-category="business-cards brochures-print" data-title="Executive Business Cards &amp; Stationery" data-tags="Business Card, Stationery, Luxury, Spot UV, Foil, Letterhead, Offset" data-case-study="case-study-business-card.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/16.jpg" alt="Executive Luxury Business Cards and Stationery Suite by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Business Cards">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Business Cards</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Executive Business Cards</h2>
+                            <p class="project-description">
+                                Premium double-sided business cards and corporate stationery suites featuring gold foil stamping, tactile card stocks, spot UV accents, and custom QR codes.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Business Cards">&#128269; Preview</button>
+                                <a href="case-study-business-card.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 8: Special Event & Creative Birthday Poster Design -->
+                    <article class="project-card" data-category="posters-ads social-media" data-title="Special Event &amp; Birthday Poster Design" data-tags="Poster, Creative Event, Birthday, Typography, Photoshop, Digital Art, Lighting" data-case-study="case-study-product-ad.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/birthday-design.jpg" alt="Special Event &amp; Creative Birthday Poster Design by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Birthday Poster">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Posters &amp; Ads</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Creative Event Poster Design</h2>
+                            <p class="project-description">
+                                Festive event promotional poster and creative digital artwork crafted with vibrant neon lighting, layered 3D typography, and custom visual effects in Adobe Photoshop.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Event Poster">&#128269; Preview</button>
+                                <a href="case-study-product-ad.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 9: Innovative Product Packaging Collection -->
+                    <article class="project-card" data-category="packaging branding" data-title="Innovative Product Packaging Collection" data-tags="Packaging, Product Box, 3D Mockup, Retail, Dielines, Illustrator, Pouch" data-case-study="case-study-brand-identity.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/14.jpg" alt="Innovative Product Packaging and 3D Mockup Collection by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Packaging Collection">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Packaging Design</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Product Packaging Suite</h2>
+                            <p class="project-description">
+                                Creative product packaging and 3D container designs engineered for shelf-presence, regulatory compliance, functional die-cuts, and premium retail appeal.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Packaging Suite">&#128269; Preview</button>
+                                <a href="case-study-brand-identity.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 10: Commercial Billboard & Outdoor Advertising -->
+                    <article class="project-card" data-category="posters-ads brochures-print" data-title="Commercial Billboard &amp; Street Ads" data-tags="Billboard, Outdoor Ad, Highway, Standee, Large Format, Commercial" data-case-study="case-study-product-ad.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/18.jpg" alt="Commercial Billboard and Outdoor Advertising Designs by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Commercial Billboard">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Posters &amp; Ads</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Commercial Billboard Ads</h2>
+                            <p class="project-description">
+                                Large-format highway billboard and outdoor street advertising layouts optimized for rapid vehicular recognition, high-contrast visibility, and instant brand recall.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Billboard Ads">&#128269; Preview</button>
+                                <a href="case-study-product-ad.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 11: Multi-Platform Social Media Suite -->
+                    <article class="project-card" data-category="social-media" data-title="Multi-Platform Social Media Campaign" data-tags="Social Media, Instagram, Carousel, Facebook, Marketing, Photoshop" data-case-study="case-study-social-media.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/12.jpg" alt="Multi-Platform Social Media Visual Suite by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Social Media Suite">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Social Media Design</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Social Campaign Suite</h2>
+                            <p class="project-description">
+                                Multi-platform campaign asset suite featuring square posts, carousel slides, and promotional banners engineered for high audience engagement and click-through rates.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Social Campaign">&#128269; Preview</button>
+                                <a href="case-study-social-media.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 12: Modern Responsive Website UI/UX Design -->
+                    <article class="project-card" data-category="website-ui" data-title="Responsive Website UI/UX Design" data-tags="Website UI, UX, Responsive, Web Design, HTML, CSS, JavaScript" data-case-study="case-study-website-ui.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/project-6-website-ui.svg" alt="Responsive Website UI UX Design Mockup by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Website UI Design">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">Website UI Design</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">Website UI/UX Design</h2>
+                            <p class="project-description">
+                                Modern, responsive, and mobile-friendly website UI/UX designs crafted with semantic HTML5, CSS animations, and intuitive digital navigation.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Website UI Design">&#128269; Preview</button>
+                                <a href="case-study-website-ui.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 13: 4K Deck - Cover & Concept -->
+                    <article class="project-card" data-category="presentation-deck" data-title="Master 4K Deck: Cover &amp; Concept" data-tags="4K Slide, Presentation, Portfolio Deck, Cover, Graphic Designer" data-case-study="case-study-kbitlogics-logo.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/1.jpg" alt="Master 4K Portfolio Presentation Slide 01: Cover &amp; Concept by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 01">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">01 &bull; Portfolio Deck Cover</h2>
+                            <p class="project-description">
+                                The official high-definition cover slide of Khuram Latif's creative portfolio deck, featuring futuristic cyber-aesthetic framing and prompt-driven conception.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 01">&#128269; Preview</button>
+                                <a href="case-study-kbitlogics-logo.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 14: 4K Deck - About Me & Bio -->
+                    <article class="project-card" data-category="presentation-deck" data-title="Master 4K Deck: About Me &amp; Bio" data-tags="4K Slide, Presentation, About Me, Bio, Khuram Latif, Profile" data-case-study="case-study-kbitlogics-logo.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/2.jpg" alt="Master 4K Portfolio Presentation Slide 02: About Me by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 02">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">02 &bull; About Me &amp; Philosophy</h2>
+                            <p class="project-description">
+                                High-resolution presentation slide introducing Khuram Latif, highlighting core creative philosophies, verified contact credentials, and studio service capabilities.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 02">&#128269; Preview</button>
+                                <a href="case-study-kbitlogics-logo.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 15: 4K Deck - Table of Contents -->
+                    <article class="project-card" data-category="presentation-deck" data-title="Master 4K Deck: Table of Contents" data-tags="4K Slide, Presentation, Table of Contents, 5 Disciplines, Overview" data-case-study="case-study-brand-identity.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/3.jpg" alt="Master 4K Portfolio Presentation Slide 03: Table of Contents by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 03">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">03 &bull; Table of Contents</h2>
+                            <p class="project-description">
+                                Structured 5-discipline overview slide breaking down Logo Folio (01), Branding Design (02), Packaging Design (03), Social Media Posts (04), and Print Media (05).
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 03">&#128269; Preview</button>
+                                <a href="case-study-brand-identity.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 16: 4K Deck - Logo Folio Direction -->
+                    <article class="project-card" data-category="presentation-deck logo-design" data-title="Master 4K Deck: Logo Folio Direction" data-tags="4K Slide, Presentation, Logofolio, Identity, Concept, Vector" data-case-study="case-study-kbitlogics-logo.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/4.jpg" alt="Master 4K Portfolio Presentation Slide 04: Logofolio Concept by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 04">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">04 &bull; Logofolio Direction</h2>
+                            <p class="project-description">
+                                Dedicated slide introducing custom logo marks designed to align with client visions through thoughtful conceptualization and vector craftsmanship.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 04">&#128269; Preview</button>
+                                <a href="case-study-kbitlogics-logo.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 17: 4K Deck - Branding Strategy (WALKO) -->
+                    <article class="project-card" data-category="presentation-deck branding" data-title="Master 4K Deck: WALKO Brand Strategy" data-tags="4K Slide, Presentation, WALKO, Dairy Milk, Brand Strategy, Identity" data-case-study="case-study-brand-identity.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/8.jpg" alt="Master 4K Portfolio Presentation Slide 08: WALKO Brand Strategy by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 08">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">08 &bull; WALKO Brand Strategy</h2>
+                            <p class="project-description">
+                                Comprehensive brand strategy breakdown for WALKO Dairy Milk, illustrating target demographics, vectormark development, and natural visual positioning.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 08">&#128269; Preview</button>
+                                <a href="case-study-brand-identity.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 18: 4K Deck - Social Media Strategy -->
+                    <article class="project-card" data-category="presentation-deck social-media" data-title="Master 4K Deck: Social Media Strategy" data-tags="4K Slide, Presentation, Social Media, Instagram, Content Strategy" data-case-study="case-study-social-media.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/11.jpg" alt="Master 4K Portfolio Presentation Slide 11: Social Media Strategy by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 11">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">11 &bull; Social Media Strategy</h2>
+                            <p class="project-description">
+                                Showcase slide detailing visual content crafted for high-performing social networks such as Instagram and LinkedIn for modern brands.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 11">&#128269; Preview</button>
+                                <a href="case-study-social-media.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 19: 4K Deck - Packaging Direction -->
+                    <article class="project-card" data-category="presentation-deck packaging" data-title="Master 4K Deck: Packaging Direction" data-tags="4K Slide, Presentation, Packaging, Retail, 3D, Unboxing" data-case-study="case-study-brand-identity.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/13.jpg" alt="Master 4K Portfolio Presentation Slide 13: Packaging Direction by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 13">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">13 &bull; Packaging Direction</h2>
+                            <p class="project-description">
+                                Presentation slide showcasing innovative, visually appealing product packaging designed to captivate customers on retail shelves.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 13">&#128269; Preview</button>
+                                <a href="case-study-brand-identity.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 20: 4K Deck - Print Media Craftsmanship -->
+                    <article class="project-card" data-category="presentation-deck brochures-print" data-title="Master 4K Deck: Print Media Suite" data-tags="4K Slide, Presentation, Print Media, Brochure, Billboard, Standee" data-case-study="case-study-business-card.html">
+                        <figure class="project-image-wrapper">
+                            <img src="images/16.jpg" alt="Master 4K Portfolio Presentation Slide 16: Print Media Craftsmanship by Khuram Latif" class="project-image" width="600" height="400" loading="lazy" decoding="async">
+                            <div class="project-image-overlay" role="button" aria-label="Preview and zoom Slide 16">
+                                <span class="overlay-badge">&#128269; Preview &amp; Zoom</span>
+                            </div>
+                        </figure>
+                        <div class="project-content">
+                            <span class="project-category">4K Slide Deck</span>
+                            <h2 class="project-title" style="font-size: 1.25rem;">16 &bull; Print Media Suite</h2>
+                            <p class="project-description">
+                                Master showcase slide displaying high-quality print designs engineered to elevate offline brand presence through brochures, billboards, and standees.
+                            </p>
+                            <div class="project-card-footer">
+                                <button type="button" class="btn-preview-card" aria-label="Quick preview Slide 16">&#128269; Preview</button>
+                                <a href="case-study-business-card.html" class="case-study-link">Case Study &rarr;</a>
+                                <a href="contact.html" class="project-link">Inquire &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Preview Modal -->
+        <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" aria-hidden="true">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-container">
+                <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close project preview">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-wrapper" id="modal-zoom-container">
+                        <img src="" alt="" class="modal-image" id="modal-project-img">
+                        <div class="zoom-controls">
+                            <button type="button" id="btn-zoom-in" class="btn-zoom" aria-label="Zoom in">+</button>
+                            <button type="button" id="btn-zoom-reset" class="btn-zoom" aria-label="Reset zoom">1:1</button>
+                            <button type="button" id="btn-zoom-out" class="btn-zoom" aria-label="Zoom out">&minus;</button>
+                        </div>
+                    </div>
+                    <div class="modal-details">
+                        <span class="modal-category" id="modal-project-category">Category</span>
+                        <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+                        <p class="modal-description" id="modal-project-desc">Description</p>
+                        <div class="modal-tags" id="modal-project-tags"></div>
+                        <div class="modal-actions">
+                            <a href="#" id="modal-casestudy-link" class="btn btn-secondary">Read Full Case Study &rarr;</a>
+                            <a href="contact.html" class="btn btn-primary">Inquire About This Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-copyright">
+                <p>&copy; <time datetime="2026">2026</time> k.bitlogics Creative Studio &bull; Founded by Khuram Latif.</p>
+                <p class="footer-tagline">Graphic Designer &bull; Website Designer &bull; Digital Marketing &bull; Artificial Intelligence</p>
+                <p class="footer-tagline">
+                    <a href="mailto:Honeymeharhm55@gmail.com" class="contact-detail-link">Honeymeharhm55@gmail.com</a> &bull; 
+                    <a href="tel:03264690033" class="contact-detail-link">03264690033</a> &bull; 
+                    <a href="tel:+923264690033" class="contact-detail-link">+92 326 469 00 33</a>
+                </p>
+            </div>
+            <div class="footer-back-to-top" style="display: flex; align-items: center; gap: 14px;">
+                <a href="admin/login.html" class="footer-admin-link" aria-label="Admin Portal">&#128274; Admin Portal</a>
+                <a href="#header" class="back-to-top-link" aria-label="Scroll back to top">Back to Top &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

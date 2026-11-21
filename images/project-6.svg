@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p6Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111732" />
+      <stop offset="100%" stop-color="#070914" />
+    </linearGradient>
+    <linearGradient id="p6Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#p6Bg)" />
+
+  <!-- 3x2 Floating Vector Icon Cards -->
+  <!-- Icon 1: Pen Tool -->
+  <rect x="90" y="70" width="115" height="110" rx="16" fill="#172144" stroke="#8b5cf6" stroke-width="2" />
+  <path d="M140 100 L160 120 L145 135 L125 115 Z" fill="#c084fc" />
+  <polygon points="120,140 125,115 145,135" fill="#38bdf8" />
+  <circle cx="132" cy="128" r="3" fill="#ffffff" />
+
+  <!-- Icon 2: Color Palette -->
+  <rect x="242" y="70" width="115" height="110" rx="16" fill="#172144" stroke="#00d2ff" stroke-width="2" />
+  <path d="M300 95 C280 95, 265 110, 265 130 C265 145, 275 155, 290 155 C295 155, 300 150, 300 145 C300 140, 305 135, 310 135 L320 135 C330 135, 335 125, 335 115 C335 105, 320 95, 300 95 Z" fill="#202c58" stroke="#38bdf8" stroke-width="2" />
+  <circle cx="282" cy="115" r="4" fill="#ec4899" />
+  <circle cx="300" cy="110" r="4" fill="#f59e0b" />
+  <circle cx="318" cy="118" r="4" fill="#10b981" />
+
+  <!-- Icon 3: Layers -->
+  <rect x="395" y="70" width="115" height="110" rx="16" fill="#172144" stroke="#a855f7" stroke-width="2" />
+  <polygon points="452,100 487,118 452,135 417,118" fill="#8b5cf6" />
+  <path d="M417 128 L452 145 L487 128" fill="none" stroke="#00d2ff" stroke-width="3" stroke-linecap="round" />
+  <path d="M417 138 L452 155 L487 138" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Icon 4: Compass / Geometry -->
+  <rect x="90" y="215" width="115" height="110" rx="16" fill="#172144" stroke="#00d2ff" stroke-width="2" />
+  <path d="M148 240 L130 295" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+  <path d="M148 240 L165 295" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+  <path d="M135 275 L160 275" stroke="#a855f7" stroke-width="3" />
+  <circle cx="148" cy="240" r="5" fill="#c084fc" />
+
+  <!-- Icon 5: Typography / Font 'A' -->
+  <rect x="242" y="215" width="115" height="110" rx="16" fill="#172144" stroke="#8b5cf6" stroke-width="2" />
+  <text x="300" y="290" font-family="'Poppins', sans-serif" font-size="52" font-weight="900" fill="url(#p6Grad)" text-anchor="middle">A</text>
+
+  <!-- Icon 6: Vector Star / Magic Wand -->
+  <rect x="395" y="215" width="115" height="110" rx="16" fill="#172144" stroke="#00d2ff" stroke-width="2" />
+  <!-- Sparkle Shape -->
+  <path d="M452 245 Q 452 270, 477 270 Q 452 270, 452 295 Q 452 270, 427 270 Q 452 270, 452 245 Z" fill="url(#p6Grad)" />
+  <circle cx="430" cy="250" r="3" fill="#ffffff" />
+  <circle cx="475" cy="290" r="3" fill="#38bdf8" />
+</svg>

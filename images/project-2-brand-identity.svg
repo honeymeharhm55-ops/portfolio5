@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p2BgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121838" />
+      <stop offset="100%" stop-color="#060914" />
+    </linearGradient>
+
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+
+    <filter id="p2Drop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#p2BgGrad)" />
+
+  <!-- Ambient Light -->
+  <circle cx="200" cy="180" r="160" fill="#8b5cf6" opacity="0.18" />
+  <circle cx="450" cy="220" r="150" fill="#00d2ff" opacity="0.15" />
+
+  <!-- Stationery Mockup Layout -->
+  <!-- 1. Corporate Brand Guidelines Book (Left Angle) -->
+  <g transform="translate(70, 70) rotate(-6)" filter="url(#p2Drop)">
+    <rect width="180" height="250" rx="6" fill="#1b2448" stroke="url(#brandGrad)" stroke-width="2" />
+    <!-- Book Spine -->
+    <rect width="20" height="250" rx="3" fill="#141c38" />
+    <!-- Cover Design -->
+    <polygon points="100,50 140,110 60,110" fill="url(#brandGrad)" />
+    <text x="100" y="150" font-family="'Poppins', sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">NEXUS</text>
+    <text x="100" y="168" font-family="'Poppins', sans-serif" font-size="9" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="2">BRAND SYSTEM</text>
+    <line x1="50" y1="190" x2="150" y2="190" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+    <rect x="50" y="205" width="40" height="5" rx="2" fill="#8b5cf6" />
+    <rect x="50" y="215" width="70" height="4" rx="2" fill="#64748b" />
+  </g>
+
+  <!-- 2. Branded Letterhead Paper (Center) -->
+  <g transform="translate(230, 60)" filter="url(#p2Drop)">
+    <rect width="200" height="260" rx="4" fill="#f8fafc" />
+    <!-- Letterhead Header -->
+    <rect x="15" y="15" width="28" height="28" rx="4" fill="url(#brandGrad)" />
+    <text x="50" y="32" font-family="'Poppins', sans-serif" font-size="13" font-weight="800" fill="#0f172a">NEXUS CORP</text>
+    <line x1="15" y1="55" x2="185" y2="55" stroke="#e2e8f0" stroke-width="1.5" />
+    <!-- Simulated Content Lines -->
+    <rect x="15" y="75" width="170" height="6" rx="2" fill="#cbd5e1" />
+    <rect x="15" y="90" width="155" height="6" rx="2" fill="#e2e8f0" />
+    <rect x="15" y="105" width="165" height="6" rx="2" fill="#e2e8f0" />
+    <rect x="15" y="120" width="130" height="6" rx="2" fill="#e2e8f0" />
+    
+    <rect x="15" y="145" width="170" height="6" rx="2" fill="#e2e8f0" />
+    <rect x="15" y="160" width="160" height="6" rx="2" fill="#e2e8f0" />
+    <rect x="15" y="175" width="140" height="6" rx="2" fill="#e2e8f0" />
+    <!-- Signature & Stamp -->
+    <path d="M15 220 Q 35 200, 55 225 T 95 210" fill="none" stroke="#6366f1" stroke-width="2" />
+    <circle cx="155" cy="220" r="16" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- 3. Envelope Mockup (Right Angle) -->
+  <g transform="translate(390, 180) rotate(12)" filter="url(#p2Drop)">
+    <rect width="180" height="120" rx="4" fill="#1e294b" stroke="url(#brandGrad)" stroke-width="1.5" />
+    <polygon points="0,0 90,65 180,0" fill="#141c38" stroke="url(#brandGrad)" stroke-width="1" />
+    <circle cx="90" cy="65" r="10" fill="#00d2ff" />
+    <rect x="20" y="80" width="60" height="6" rx="2" fill="#94a3b8" />
+  </g>
+
+  <!-- Badge Top Left -->
+  <rect x="25" y="25" width="175" height="30" rx="15" fill="rgba(19, 27, 52, 0.85)" stroke="url(#brandGrad)" stroke-width="1" />
+  <text x="112" y="44" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">PROJECT 02: IDENTITY</text>
+</svg>

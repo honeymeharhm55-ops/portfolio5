@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Khuram Latif Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Route Protection Guard (Synchronous check before render) -->
+    <script>
+        (function() {
+            try {
+                const session = localStorage.getItem('kl_admin_session') || sessionStorage.getItem('kl_admin_session');
+                if (!session) {
+                    window.location.replace('login.html?redirect=index.html');
+                }
+            } catch (e) {
+                window.location.replace('login.html');
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Toast Notification Banner Container -->
+    <div id="admin-toast-container" class="admin-toast-container" aria-live="polite"></div>
+
+    <div class="dashboard-layout">
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="dashboard-sidebar" id="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <span class="logo-mark">KL<span class="logo-dot">.</span></span>
+                    <div class="logo-meta">
+                        <span class="logo-title">k.bitlogics</span>
+                        <span class="logo-badge">Admin Portal</span>
+                    </div>
+                </a>
+                <button type="button" class="sidebar-close-btn" id="btn-sidebar-close" aria-label="Close navigation">&times;</button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="sidebar-nav" aria-label="Admin Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <button type="button" class="nav-link active" data-tab="overview">
+                            <span class="nav-icon">&#128202;</span>
+                            <span class="nav-text">Overview</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" data-tab="projects">
+                            <span class="nav-icon">&#128203;</span>
+                            <span class="nav-text">Projects</span>
+                            <span class="nav-counter" id="badge-projects-count">6</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" data-tab="testimonials">
+                            <span class="nav-icon">&#11088;</span>
+                            <span class="nav-text">Testimonials</span>
+                            <span class="nav-counter" id="badge-testimonials-count">4</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" data-tab="blog">
+                            <span class="nav-icon">&#9997;</span>
+                            <span class="nav-text">Blog &amp; Insights</span>
+                            <span class="nav-counter" id="badge-blog-count">3</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" data-tab="inquiries">
+                            <span class="nav-icon">&#9993;</span>
+                            <span class="nav-text">Client Inquiries</span>
+                            <span class="nav-counter highlight" id="badge-inquiries-count">5</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="nav-link" data-tab="settings">
+                            <span class="nav-icon">&#9881;</span>
+                            <span class="nav-text">Backend &amp; Settings</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar User Profile & Logout -->
+            <div class="sidebar-footer">
+                <div class="admin-user-pill">
+                    <img src="../images/khuram-latif-profile.jpg" alt="Khuram Latif" class="admin-avatar">
+                    <div class="admin-meta">
+                        <span class="admin-name">Khuram Latif</span>
+                        <span class="admin-role">Super Admin</span>
+                    </div>
+                </div>
+                <div class="sidebar-action-row">
+                    <a href="../index.html" target="_blank" class="sidebar-btn-view" title="Open Public Portfolio in New Tab">
+                        <span>&#127760; Public Site &rarr;</span>
+                    </a>
+                    <button type="button" class="sidebar-btn-logout" id="btn-sidebar-logout" title="Sign Out of Dashboard">
+                        <span>&#128682; Logout</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT AREA ==================== -->
+        <div class="dashboard-main-wrapper">
+            <!-- Top Header Bar -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button type="button" class="sidebar-toggle-btn" id="btn-sidebar-toggle" aria-label="Toggle navigation drawer">&#9776;</button>
+                    <h2 class="topbar-view-title" id="topbar-title">Dashboard Overview</h2>
+                </div>
+                <div class="topbar-right">
+                    <div class="backend-status-pill" id="backend-status-indicator">
+                        <span class="status-dot"></span>
+                        <span id="backend-status-text">Authenticated Session</span>
+                    </div>
+                    <a href="../index.html" target="_blank" class="btn btn-outline btn-sm">
+                        <span>View Live Website &#8599;</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content Container -->
+            <main class="dashboard-content" id="dashboard-content">
+
+                <!-- ==================== TAB 1: OVERVIEW ==================== -->
+                <section class="tab-pane active" id="tab-overview" aria-labelledby="topbar-title">
+                    <!-- Metric Stat Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper icon-purple">&#128203;</div>
+                            <div class="stat-data">
+                                <span class="stat-label">Total Projects</span>
+                                <h3 class="stat-value" id="stat-total-projects">6</h3>
+                                <span class="stat-subtext">Across 6 design disciplines</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper icon-cyan">&#9993;</div>
+                            <div class="stat-data">
+                                <span class="stat-label">Client Inquiries</span>
+                                <h3 class="stat-value" id="stat-total-inquiries">5</h3>
+                                <span class="stat-subtext"><strong class="text-cyan">2 new</strong> pending review</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper icon-yellow">&#11088;</div>
+                            <div class="stat-data">
+                                <span class="stat-label">Testimonials</span>
+                                <h3 class="stat-value" id="stat-total-testimonials">4</h3>
+                                <span class="stat-subtext">100% 5-Star verified</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon-wrapper icon-green">&#9997;</div>
+                            <div class="stat-data">
+                                <span class="stat-label">Blog Articles</span>
+                                <h3 class="stat-value" id="stat-total-articles">3</h3>
+                                <span class="stat-subtext">Design &amp; AI insights</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Action Shortcuts -->
+                    <div class="dashboard-section-box">
+                        <h3 class="section-box-title">Quick Actions</h3>
+                        <div class="quick-actions-row">
+                            <button type="button" class="btn btn-primary btn-quick-action" id="btn-quick-new-project">
+                                <span>&#43; Add New Project</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-quick-action" id="btn-quick-new-article">
+                                <span>&#9997; Create Blog Post</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-quick-action" id="btn-quick-new-testimonial">
+                                <span>&#11088; Add Client Review</span>
+                            </button>
+                            <button type="button" class="btn btn-outline btn-quick-action" id="btn-quick-view-inquiries">
+                                <span>&#9993; Review Inquiries</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Split Overview: Recent Projects & Recent Inquiries -->
+                    <div class="overview-split-grid">
+                        <!-- Recent Projects Preview -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Recent Portfolio Projects</h3>
+                                <button type="button" class="btn-link-action" data-jump-tab="projects">View All &rarr;</button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Project</th>
+                                            <th>Category</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="overview-projects-tbody">
+                                        <!-- Dynamically populated -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Recent Inquiries Preview -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Latest Client Inquiries</h3>
+                                <button type="button" class="btn-link-action" data-jump-tab="inquiries">View All &rarr;</button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Client</th>
+                                            <th>Subject / Type</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="overview-inquiries-tbody">
+                                        <!-- Dynamically populated -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== TAB 2: PROJECTS MANAGEMENT ==================== -->
+                <section class="tab-pane" id="tab-projects" aria-labelledby="topbar-title">
+                    <div class="tab-header-toolbar">
+                        <div class="toolbar-search-box">
+                            <span class="search-icon">&#128269;</span>
+                            <input type="text" id="project-filter-search" class="admin-input" placeholder="Search projects by title or category...">
+                        </div>
+                        <div class="toolbar-actions">
+                            <select id="project-filter-category" class="admin-select">
+                                <option value="all">All Categories</option>
+                                <option value="logo-design">Logo Design</option>
+                                <option value="branding">Branding</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="product-ad">Product Advertisement</option>
+                                <option value="business-cards">Business Cards</option>
+                                <option value="website-ui">Website UI Design</option>
+                            </select>
+                            <button type="button" class="btn btn-primary" id="btn-open-add-project-modal">
+                                <span>&#43; Add New Project</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="admin-table" id="projects-full-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 70px;">Image</th>
+                                        <th>Project Title</th>
+                                        <th>Category</th>
+                                        <th>Client / Tags</th>
+                                        <th>Status</th>
+                                        <th style="width: 130px; text-align: right;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projects-table-tbody">
+                                    <!-- Populated via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== TAB 3: TESTIMONIALS MANAGEMENT ==================== -->
+                <section class="tab-pane" id="tab-testimonials" aria-labelledby="topbar-title">
+                    <div class="tab-header-toolbar">
+                        <div>
+                            <h3 class="toolbar-heading">Client Reviews &amp; Social Proof</h3>
+                            <p class="toolbar-subtext">Manage authentic client testimonials and showcase ratings on your portfolio.</p>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btn-open-add-testimonial-modal">
+                            <span>&#43; Add New Testimonial</span>
+                        </button>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Client Name</th>
+                                        <th>Company / Role</th>
+                                        <th>Rating</th>
+                                        <th>Feedback Excerpt</th>
+                                        <th>Status</th>
+                                        <th style="width: 130px; text-align: right;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="testimonials-table-tbody">
+                                    <!-- Populated via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== TAB 4: BLOG MANAGEMENT ==================== -->
+                <section class="tab-pane" id="tab-blog" aria-labelledby="topbar-title">
+                    <div class="tab-header-toolbar">
+                        <div>
+                            <h3 class="toolbar-heading">Articles &amp; Industry Insights</h3>
+                            <p class="toolbar-subtext">Publish design articles, case study breakdowns, and AI workflow tutorials.</p>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btn-open-add-article-modal">
+                            <span>&#43; Create New Article</span>
+                        </button>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Article Title</th>
+                                        <th>Category</th>
+                                        <th>Read Time</th>
+                                        <th>Date Published</th>
+                                        <th>Status</th>
+                                        <th style="width: 130px; text-align: right;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="blog-table-tbody">
+                                    <!-- Populated via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== TAB 5: INQUIRIES MANAGEMENT ==================== -->
+                <section class="tab-pane" id="tab-inquiries" aria-labelledby="topbar-title">
+                    <div class="tab-header-toolbar">
+                        <div>
+                            <h3 class="toolbar-heading">Client Leads &amp; Consultation Inquiries</h3>
+                            <p class="toolbar-subtext">Incoming inquiries from Contact Form, Pricing tier buttons, and Booking system.</p>
+                        </div>
+                        <div class="inquiry-filter-pills">
+                            <button type="button" class="filter-pill active" data-inquiry-filter="all">All (5)</button>
+                            <button type="button" class="filter-pill" data-inquiry-filter="new">New (2)</button>
+                            <button type="button" class="filter-pill" data-inquiry-filter="contacted">Contacted (2)</button>
+                            <button type="button" class="filter-pill" data-inquiry-filter="closed">Closed (1)</button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Received Date</th>
+                                        <th>Client Name</th>
+                                        <th>Email</th>
+                                        <th>Subject / Service</th>
+                                        <th>Status</th>
+                                        <th style="width: 150px; text-align: right;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inquiries-table-tbody">
+                                    <!-- Populated via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== TAB 6: BACKEND & SETTINGS ==================== -->
+                <section class="tab-pane" id="tab-settings" aria-labelledby="topbar-title">
+                    <div class="settings-grid">
+                        <!-- Backend Configuration Panel -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header">
+                                <h3 class="panel-title">&#128274; Trusted Authentication &amp; Database Config</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p class="settings-desc">
+                                    Connect your official <strong>Supabase</strong> or <strong>Firebase</strong> project credentials below. Your keys are stored securely in browser storage and communicate directly with your backend API.
+                                </p>
+
+                                <form id="backend-config-form" class="settings-form">
+                                    <div class="form-group">
+                                        <label for="cfg-auth-provider" class="form-label">Authentication &amp; DB Provider</label>
+                                        <select id="cfg-auth-provider" class="admin-select">
+                                            <option value="supabase">Supabase (PostgreSQL + RLS Auth + Storage)</option>
+                                            <option value="firebase">Firebase (Firestore + Auth + Storage)</option>
+                                            <option value="custom">Custom Node.js / Express REST API</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cfg-project-url" class="form-label">Supabase / Backend Project URL</label>
+                                        <input type="text" id="cfg-project-url" class="admin-input" placeholder="https://xyzcompany.supabase.co">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cfg-anon-key" class="form-label">Public Anon API Key (Safe for Frontend)</label>
+                                        <input type="password" id="cfg-anon-key" class="admin-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+                                        <span class="field-hint">Never enter your secret Service Role Key here. Only use the public client Anon Key.</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cfg-storage-bucket" class="form-label">Image Storage Bucket Name</label>
+                                        <input type="text" id="cfg-storage-bucket" class="admin-input" placeholder="portfolio-images">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary" id="btn-save-backend-cfg">
+                                        Save Backend Configuration
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Data Backup & Documentation -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header">
+                                <h3 class="panel-title">&#128190; Portfolio Data Backup &amp; Instructions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p class="settings-desc">
+                                    Export your projects, testimonials, and inquiry records as a JSON backup file anytime.
+                                </p>
+                                <div class="backup-actions">
+                                    <button type="button" class="btn btn-secondary" id="btn-export-data">
+                                        <span>&#128229; Export All Data (JSON)</span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline" id="btn-reset-demo-data">
+                                        <span>&#8634; Reset Sample Portfolio Data</span>
+                                    </button>
+                                </div>
+
+                                <div class="documentation-card">
+                                    <h4 class="doc-title">Setup Documentation</h4>
+                                    <p class="doc-text">A comprehensive guide with full PostgreSQL schemas, RLS policies, and step-by-step instructions is available in:</p>
+                                    <code class="doc-path">admin/README-BACKEND-SETUP.md</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: ADD / EDIT PROJECT ==================== -->
+    <div class="admin-modal" id="modal-project" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-project-title">Add New Project</h3>
+                <button type="button" class="modal-close-btn" data-close-modal="modal-project">&times;</button>
+            </div>
+            <form id="form-project" class="modal-form">
+                <input type="hidden" id="project-id" value="">
+                
+                <div class="form-row-dual">
+                    <div class="form-group">
+                        <label for="proj-title" class="form-label">Project Title <span class="required-star">*</span></label>
+                        <input type="text" id="proj-title" class="admin-input" placeholder="e.g. Brand Identity Suite" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-category" class="form-label">Category <span class="required-star">*</span></label>
+                        <select id="proj-category" class="admin-select" required>
+                            <option value="logo-design">Logo Design</option>
+                            <option value="branding">Branding</option>
+                            <option value="social-media">Social Media Design</option>
+                            <option value="product-ad">Product Advertisement</option>
+                            <option value="business-cards">Business Cards</option>
+                            <option value="website-ui">Website UI Design</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-client" class="form-label">Client Name / Brand &bull; Tags</label>
+                    <input type="text" id="proj-client" class="admin-input" placeholder="e.g. k.bitlogics &bull; Vector, Identity, Minimalist">
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-desc" class="form-label">Description <span class="required-star">*</span></label>
+                    <textarea id="proj-desc" class="admin-textarea" rows="3" placeholder="Overview of the creative direction, deliverables, and impact..." required></textarea>
+                </div>
+
+                <!-- Image Upload (Task 11) -->
+                <div class="form-group">
+                    <label class="form-label">Project Thumbnail Image <span class="required-star">*</span></label>
+                    <div class="image-uploader-box" id="project-image-dropzone">
+                        <input type="file" id="proj-file-input" accept="image/png, image/jpeg, image/svg+xml, image/webp" style="display: none;">
+                        <input type="hidden" id="proj-image-url" value="">
+                        
+                        <div class="uploader-preview" id="proj-preview-wrapper" style="display: none;">
+                            <img id="proj-image-preview" src="" alt="Project Image Preview">
+                            <button type="button" class="btn-remove-image" id="btn-remove-proj-img">&times; Remove Image</button>
+                        </div>
+                        
+                        <div class="uploader-placeholder" id="proj-uploader-placeholder">
+                            <span class="upload-icon">&#128247;</span>
+                            <span class="upload-prompt"><strong>Click to select image</strong> or drag and drop</span>
+                            <span class="upload-limits">PNG, JPG, SVG, or WEBP (Max 5MB)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row-dual">
+                    <div class="form-group">
+                        <label for="proj-casestudy" class="form-label">Case Study URL (Optional)</label>
+                        <input type="text" id="proj-casestudy" class="admin-input" placeholder="case-study-kbitlogics-logo.html">
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-status" class="form-label">Publication Status</label>
+                        <select id="proj-status" class="admin-select">
+                            <option value="published">Published (Visible on Portfolio)</option>
+                            <option value="draft">Draft (Admin Only)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" data-close-modal="modal-project">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save-project">Save Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: ADD / EDIT TESTIMONIAL ==================== -->
+    <div class="admin-modal" id="modal-testimonial" role="dialog" aria-modal="true" aria-labelledby="modal-test-title" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-test-title">Add Client Testimonial</h3>
+                <button type="button" class="modal-close-btn" data-close-modal="modal-testimonial">&times;</button>
+            </div>
+            <form id="form-testimonial" class="modal-form">
+                <input type="hidden" id="testimonial-id" value="">
+                
+                <div class="form-row-dual">
+                    <div class="form-group">
+                        <label for="test-author" class="form-label">Client Full Name <span class="required-star">*</span></label>
+                        <input type="text" id="test-author" class="admin-input" placeholder="e.g. Sarah Jenkins" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="test-company" class="form-label">Company &bull; Role <span class="required-star">*</span></label>
+                        <input type="text" id="test-company" class="admin-input" placeholder="e.g. Apex Creative &bull; Marketing Director" required>
+                    </div>
+                </div>
+
+                <div class="form-row-dual">
+                    <div class="form-group">
+                        <label for="test-rating" class="form-label">Star Rating (Genuine Only) <span class="required-star">*</span></label>
+                        <select id="test-rating" class="admin-select">
+                            <option value="5">★★★★★ 5 Stars</option>
+                            <option value="4">★★★★☆ 4 Stars</option>
+                            <option value="3">★★★☆☆ 3 Stars</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="test-status" class="form-label">Approval Status</label>
+                        <select id="test-status" class="admin-select">
+                            <option value="approved">Approved &amp; Live</option>
+                            <option value="pending">Pending Verification</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="test-quote" class="form-label">Client Review Quote <span class="required-star">*</span></label>
+                    <textarea id="test-quote" class="admin-textarea" rows="4" placeholder="Client feedback in their own words..." required></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" data-close-modal="modal-testimonial">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save-testimonial">Save Testimonial</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: ADD / EDIT BLOG ARTICLE ==================== -->
+    <div class="admin-modal" id="modal-article" role="dialog" aria-modal="true" aria-labelledby="modal-article-title" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-article-title">Create Blog Article</h3>
+                <button type="button" class="modal-close-btn" data-close-modal="modal-article">&times;</button>
+            </div>
+            <form id="form-article" class="modal-form">
+                <input type="hidden" id="article-id" value="">
+                
+                <div class="form-group">
+                    <label for="art-title" class="form-label">Article Title <span class="required-star">*</span></label>
+                    <input type="text" id="art-title" class="admin-input" placeholder="e.g. The Psychology of Color in Corporate Branding" required>
+                </div>
+
+                <div class="form-row-dual">
+                    <div class="form-group">
+                        <label for="art-category" class="form-label">Category</label>
+                        <select id="art-category" class="admin-select">
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Brand Strategy">Brand Strategy</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                            <option value="Web Design">Web Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="art-readtime" class="form-label">Read Time</label>
+                        <input type="text" id="art-readtime" class="admin-input" placeholder="5 min read">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="art-content" class="form-label">Article Content (Markdown / HTML) <span class="required-star">*</span></label>
+                    <textarea id="art-content" class="admin-textarea" rows="6" placeholder="Write or paste your article draft..." required></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" data-close-modal="modal-article">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save-article">Save Article</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: INQUIRY DETAILS ==================== -->
+    <div class="admin-modal" id="modal-inquiry" role="dialog" aria-modal="true" aria-labelledby="modal-inq-title" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-inq-title">Inquiry Details</h3>
+                <button type="button" class="modal-close-btn" data-close-modal="modal-inquiry">&times;</button>
+            </div>
+            <div class="modal-body" id="inquiry-details-content">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-outline" data-close-modal="modal-inquiry">Close</button>
+                <a id="btn-inquiry-reply-email" href="#" class="btn btn-primary">&#9993; Reply via Email</a>
+                <a id="btn-inquiry-reply-whatsapp" href="#" target="_blank" class="btn btn-whatsapp">&#128172; Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: CONFIRM DELETION ==================== -->
+    <div class="admin-modal" id="modal-confirm-delete" role="dialog" aria-modal="true" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container modal-sm">
+            <div class="modal-header">
+                <h3 class="modal-title" style="color: #ef4444;">Confirm Deletion</h3>
+                <button type="button" class="modal-close-btn" data-close-modal="modal-confirm-delete">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="delete-confirm-prompt">Are you sure you want to delete this item? This action cannot be undone.</p>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-outline" data-close-modal="modal-confirm-delete">Cancel</button>
+                <button type="button" class="btn btn-danger" id="btn-confirm-delete-action">Delete Permanently</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase Official Client SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof AdminDashboard !== 'undefined') {
+                AdminDashboard.init();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p2Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+    <linearGradient id="glow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#p2Bg)" />
+
+  <!-- E-commerce Store Card -->
+  <rect x="80" y="60" width="440" height="280" rx="18" fill="#141c3a" stroke="url(#glow2)" stroke-width="2" />
+
+  <!-- Hero Banner Mockup inside Store -->
+  <rect x="110" y="90" width="380" height="130" rx="10" fill="#1e2952" />
+  <circle cx="170" cy="155" r="40" fill="#8b5cf6" opacity="0.3" />
+  <!-- Sneaker / Product Silhouette -->
+  <path d="M140 165 C160 145, 190 145, 210 160 C230 155, 255 160, 270 175 L220 185 L140 185 Z" fill="#00d2ff" />
+  
+  <text x="310" y="140" font-family="'Poppins', sans-serif" font-size="20" font-weight="800" fill="#ffffff">SUMMER DROP</text>
+  <text x="310" y="165" font-family="'Poppins', sans-serif" font-size="13" font-weight="600" fill="#38bdf8">UP TO 50% OFF</text>
+  <rect x="310" y="180" width="90" height="24" rx="12" fill="#8b5cf6" />
+  <text x="355" y="196" font-family="'Poppins', sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">SHOP NOW</text>
+
+  <!-- Product Grid Items Below Banner -->
+  <rect x="110" y="240" width="115" height="75" rx="8" fill="#1a2444" />
+  <rect x="125" y="255" width="40" height="40" rx="4" fill="#38bdf8" opacity="0.4" />
+  <rect x="175" y="260" width="40" height="8" rx="2" fill="#94a3b8" />
+  <rect x="175" y="275" width="25" height="8" rx="2" fill="#38bdf8" />
+
+  <rect x="242" y="240" width="115" height="75" rx="8" fill="#1a2444" />
+  <rect x="257" y="255" width="40" height="40" rx="4" fill="#a855f7" opacity="0.4" />
+  <rect x="307" y="260" width="40" height="8" rx="2" fill="#94a3b8" />
+  <rect x="307" y="275" width="25" height="8" rx="2" fill="#a855f7" />
+
+  <rect x="375" y="240" width="115" height="75" rx="8" fill="#1a2444" />
+  <rect x="390" y="255" width="40" height="40" rx="4" fill="#00d2ff" opacity="0.4" />
+  <rect x="440" y="260" width="40" height="8" rx="2" fill="#94a3b8" />
+  <rect x="440" y="275" width="25" height="8" rx="2" fill="#00d2ff" />
+</svg>

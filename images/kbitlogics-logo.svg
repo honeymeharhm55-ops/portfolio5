@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 200" width="100%" height="100%">
+  <defs>
+    <!-- Gradients matching user's k.bitlogics logo -->
+    <linearGradient id="kStemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0062ff" />
+      <stop offset="60%" stop-color="#0080ff" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+
+    <linearGradient id="kArmGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052d4" />
+      <stop offset="50%" stop-color="#0077ff" />
+      <stop offset="100%" stop-color="#00c8ff" />
+    </linearGradient>
+
+    <linearGradient id="kLegGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052cc" />
+      <stop offset="100%" stop-color="#00e5ff" />
+    </linearGradient>
+
+    <linearGradient id="orbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#00e5c0" />
+      <stop offset="100%" stop-color="#00e676" />
+    </linearGradient>
+
+    <linearGradient id="pixelGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="100%" stop-color="#00c4a7" />
+    </linearGradient>
+
+    <linearGradient id="pixelGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0080ff" />
+      <stop offset="100%" stop-color="#0052cc" />
+    </linearGradient>
+
+    <linearGradient id="logicsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00a8e8" />
+      <stop offset="40%" stop-color="#00c4b4" />
+      <stop offset="100%" stop-color="#00e676" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- ==================== LEFT ICON: STYLIZED 'K' WITH ORBIT & PIXELS ==================== -->
+  <g transform="translate(20, 10)">
+    <!-- Back part of orbit ring (behind the K) -->
+    <path d="M 45 130 C 20 150, 25 170, 60 170 C 110 170, 175 110, 205 60 C 215 45, 210 35, 195 38" 
+          fill="none" stroke="url(#orbitGrad)" stroke-width="7" stroke-linecap="round" opacity="0.85" />
+
+    <!-- Digital Pixel Blocks on left -->
+    <rect x="25" y="65" width="16" height="16" rx="3" fill="url(#pixelGrad1)" />
+    <rect x="44" y="52" width="16" height="16" rx="3" fill="#00c8ff" />
+    <rect x="44" y="71" width="16" height="16" rx="3" fill="url(#pixelGrad2)" />
+    <rect x="48" y="93" width="14" height="14" rx="2.5" fill="#0088ff" />
+
+    <!-- Stylized 'K' - Vertical Stem -->
+    <rect x="68" y="42" width="24" height="106" rx="5" fill="url(#kStemGrad)" />
+
+    <!-- Stylized 'K' - Top Diagonal Arm -->
+    <path d="M 92 88 L 148 42 C 153 38, 162 42, 162 49 L 162 65 C 162 70, 158 75, 153 79 L 112 110 Z" 
+          fill="url(#kArmGrad)" />
+
+    <!-- Stylized 'K' - Bottom Diagonal Leg with angled slice -->
+    <path d="M 104 100 L 158 142 C 163 146, 165 152, 161 156 L 150 162 C 145 165, 138 163, 134 159 L 85 118 Z" 
+          fill="url(#kLegGrad)" />
+
+    <!-- Front sweeping section of the orbital ring -->
+    <path d="M 18 135 C 10 115, 30 90, 80 75 C 130 60, 185 55, 202 70 C 208 76, 205 85, 190 92 C 165 104, 115 125, 75 138 C 50 146, 26 148, 18 135 Z" 
+          fill="url(#orbitGrad)" />
+
+    <!-- Subtle accent dot on top orbit tip -->
+    <circle cx="204" cy="55" r="4.5" fill="#00e676" />
+  </g>
+
+  <!-- ==================== VERTICAL SEPARATOR ==================== -->
+  <line x1="250" y1="50" x2="250" y2="150" stroke="#334155" stroke-width="2" stroke-linecap="round" />
+
+  <!-- ==================== RIGHT WORDMARK: 'k.bitlogics' ==================== -->
+  <g transform="translate(275, 132)">
+    <text font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="800" font-size="78" letter-spacing="-1.5">
+      <!-- 'k.' in Royal Blue -->
+      <tspan fill="#0066ff">k</tspan><tspan fill="#00d2ff">.</tspan>
+      <!-- 'bit' in Azure/Sky Blue -->
+      <tspan fill="#0099ff">bit</tspan>
+      <!-- 'logics' in Cyan to Tech-Green gradient -->
+      <tspan fill="url(#logicsGrad)">logics</tspan>
+    </text>
+  </g>
+</svg>

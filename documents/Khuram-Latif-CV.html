@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Khuram Latif | Creative Graphic Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --text-dark: #111827;
+            --text-muted: #4b5563;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: #eef2f6;
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .cv-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Toolbar (Hidden in print) */
+        .cv-toolbar {
+            background: #1e1b4b;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ffffff;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .cv-toolbar-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .btn-print {
+            background: #6366f1;
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-print:hover {
+            background: #4f46e5;
+        }
+
+        /* CV Header */
+        .cv-header {
+            padding: 36px 40px;
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .cv-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .cv-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #818cf8;
+            margin-top: 4px;
+        }
+
+        .cv-brand {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        .cv-contact {
+            text-align: right;
+            font-size: 0.88rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .cv-contact a {
+            color: #c7d2fe;
+            text-decoration: none;
+        }
+
+        .cv-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* CV Body */
+        .cv-body {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            padding: 36px 40px;
+            gap: 36px;
+        }
+
+        .cv-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            border-right: 1px solid var(--border-color);
+            padding-right: 28px;
+        }
+
+        .cv-main {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .cv-block-title {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        .cv-pill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .cv-pill-list li {
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: #eef2ff;
+            color: #3730a3;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #c7d2fe;
+        }
+
+        .cv-services-list, .cv-bullet-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        .cv-services-list li::before, .cv-bullet-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .cv-services-list li, .cv-bullet-list li {
+            padding-left: 1em;
+        }
+
+        /* Main Content Sections */
+        .cv-summary-text {
+            font-size: 0.94rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .cv-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cv-timeline-item {
+            position: relative;
+            padding-left: 18px;
+            border-left: 2px solid #e0e7ff;
+        }
+
+        .cv-timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cv-item-role {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .cv-item-duration {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .cv-item-org {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+
+        .cv-item-tasks {
+            padding-left: 18px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .cv-item-notes {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .cv-footer {
+            padding: 20px 40px;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.82rem;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .cv-body {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+            .cv-sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding-right: 0;
+                padding-bottom: 24px;
+            }
+            .cv-header {
+                padding: 24px;
+                flex-direction: column;
+            }
+            .cv-contact {
+                text-align: left;
+            }
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .cv-wrapper {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+            }
+            .cv-toolbar {
+                display: none !important;
+            }
+            .cv-header {
+                background: #111827 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-wrapper">
+        <!-- Action Toolbar -->
+        <div class="cv-toolbar">
+            <span class="cv-toolbar-title">Curriculum Vitae - Khuram Latif</span>
+            <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+
+        <!-- Header -->
+        <header class="cv-header">
+            <div>
+                <h1 class="cv-name">Khuram Latif</h1>
+                <div class="cv-title">Creative Graphic Designer &amp; Digital Professional</div>
+                <div class="cv-brand">Founder / Lead Designer at <strong>k.bitlogics</strong></div>
+            </div>
+            <div class="cv-contact">
+                <div>Email: <a href="mailto:Honeymeharhm55@gmail.com">Honeymeharhm55@gmail.com</a></div>
+                <div>Phone / WhatsApp: <a href="tel:03264690033">03264690033</a> / <a href="tel:+923264690033">+92 326 469 00 33</a></div>
+                <div>Availability: Worldwide &bull; Remote / Freelance</div>
+            </div>
+        </header>
+
+        <!-- Body -->
+        <div class="cv-body">
+            <!-- Sidebar -->
+            <aside class="cv-sidebar">
+                <div>
+                    <h3 class="cv-block-title">Core Skills</h3>
+                    <div style="font-size:0.8rem; font-weight:600; color:#4b5563; margin-bottom:4px;">Design &amp; Vector:</div>
+                    <ul class="cv-pill-list">
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Vector Graphics</li>
+                        <li>Brand Identity</li>
+                        <li>Typography</li>
+                    </ul>
+
+                    <div style="font-size:0.8rem; font-weight:600; color:#4b5563; margin-bottom:4px;">Web &amp; Front-End:</div>
+                    <ul class="cv-pill-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+
+                    <div style="font-size:0.8rem; font-weight:600; color:#4b5563; margin-bottom:4px;">Domains:</div>
+                    <ul class="cv-pill-list">
+                        <li>Graphic Design</li>
+                        <li>Website Design</li>
+                        <li>Digital Marketing</li>
+                        <li>Artificial Intelligence</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="cv-block-title">Services</h3>
+                    <ul class="cv-services-list">
+                        <li>Logo Design &amp; Brand Systems</li>
+                        <li>Corporate Stationery Suites</li>
+                        <li>Social Media Marketing Visuals</li>
+                        <li>Commercial Product Advertising</li>
+                        <li>Responsive Website UI/UX Design</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="cv-block-title">Competencies</h3>
+                    <ul class="cv-bullet-list">
+                        <li>100% Vector Scalability</li>
+                        <li>Color Harmony &amp; Psychology</li>
+                        <li>Responsive Layout Architecture</li>
+                        <li>International Client Standards</li>
+                        <li>Rapid Milestone Execution</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="cv-main">
+                <div>
+                    <h3 class="cv-block-title">Professional Introduction</h3>
+                    <p class="cv-summary-text">
+                        Versatile and results-driven <strong>Creative Graphic Designer</strong> with comprehensive expertise in visual branding, vector illustration, digital marketing visuals, and modern responsive website design. Proven capability in translating complex brand concepts into distinctive visual narratives across digital and print media utilizing <strong>Adobe Photoshop</strong>, <strong>Adobe Illustrator</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and generative artificial intelligence workflows.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="cv-block-title">Professional Experience</h3>
+                    <div class="cv-timeline">
+                        <!-- EDIT EXPERIENCE 1 HERE -->
+                        <div class="cv-timeline-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-role">Lead Graphic Designer &amp; Creative Specialist</h4>
+                                <span class="cv-item-duration">[2022 &ndash; Present]</span>
+                            </div>
+                            <div class="cv-item-org">k.bitlogics &bull; [Freelance / Design Agency]</div>
+                            <ul class="cv-item-tasks">
+                                <li>Conceptualized and produced vector logos, brand guidelines, and stationery kits for commercial clients.</li>
+                                <li>Engineered high-converting promotional banners, social media marketing assets, and product advertising collateral.</li>
+                                <li>Developed front-end web components in HTML, CSS, and JavaScript for seamless cross-platform brand execution.</li>
+                            </ul>
+                        </div>
+
+                        <!-- EDIT EXPERIENCE 2 HERE (Editable Placeholder) -->
+                        <div class="cv-timeline-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-role">[Role Title &ndash; e.g. Graphic Designer / Visual Creator]</h4>
+                                <span class="cv-item-duration">[Year &ndash; Year / Duration]</span>
+                            </div>
+                            <div class="cv-item-org">[Company / Studio / Client Organization Name]</div>
+                            <ul class="cv-item-tasks">
+                                <li>[Created bespoke vector assets, business stationery, and marketing visuals using Adobe Illustrator and Photoshop.]</li>
+                                <li>[Collaborated closely with stakeholders to ensure brand alignment and visual consistency.]</li>
+                                <li>[Assisted in digital asset formatting, image optimization, and UI responsiveness testing.]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="cv-block-title">Education &amp; Credentials</h3>
+                    <div class="cv-timeline">
+                        <!-- EDIT EDUCATION 1 HERE (Editable Placeholder) -->
+                        <div class="cv-timeline-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-role">[Degree / Certificate &ndash; e.g. Bachelor of Science / Intermediate / Graphic Design]</h4>
+                                <span class="cv-item-duration">[Year &ndash; Year]</span>
+                            </div>
+                            <div class="cv-item-org">[University / College / Board / Institution Name]</div>
+                            <p class="cv-item-notes">
+                                [Focus areas: Visual communication, digital media design, computer applications, and multimedia arts.]
+                            </p>
+                        </div>
+
+                        <!-- EDIT CERTIFICATION 2 HERE (Editable Placeholder) -->
+                        <div class="cv-timeline-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-role">[Professional Certification &ndash; e.g. Advanced Graphic Design &amp; Web Technologies]</h4>
+                                <span class="cv-item-duration">[Year]</span>
+                            </div>
+                            <div class="cv-item-org">[Training Academy / Online Platform / Certifying Body]</div>
+                            <p class="cv-item-notes">
+                                [Mastery in Adobe Creative Suite (Photoshop &amp; Illustrator), Responsive Front-End Design, and Digital Advertising.]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="cv-footer">
+            &copy; 2026 Khuram Latif &bull; Official Portfolio Curriculum Vitae &bull; References available upon request.
+        </footer>
+    </div>
+
+</body>
+</html>

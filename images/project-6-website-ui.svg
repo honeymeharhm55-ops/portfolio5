@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p6BgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121838" />
+      <stop offset="100%" stop-color="#050714" />
+    </linearGradient>
+
+    <linearGradient id="uiNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+
+    <filter id="uiShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#p6BgGrad)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="180" cy="180" r="140" fill="#8b5cf6" opacity="0.2" />
+  <circle cx="480" cy="200" r="140" fill="#00d2ff" opacity="0.2" />
+
+  <!-- Desktop Browser Window Mockup -->
+  <g transform="translate(60, 65)" filter="url(#uiShadow)">
+    <rect width="400" height="260" rx="12" fill="#0e152e" stroke="url(#uiNeon)" stroke-width="2" />
+    
+    <!-- Window Header -->
+    <path d="M0 10 C0 4, 4 0, 10 0 L390 0 C396 0, 400 4, 400 10 L400 28 L0 28 Z" fill="#090e1f" />
+    <circle cx="15" cy="14" r="4.5" fill="#ef4444" />
+    <circle cx="28" cy="14" r="4.5" fill="#f59e0b" />
+    <circle cx="41" cy="14" r="4.5" fill="#10b981" />
+    <rect x="70" y="7" width="180" height="14" rx="4" fill="#182348" />
+
+    <!-- Web Page UI Content -->
+    <!-- Nav Bar -->
+    <rect x="18" y="42" width="30" height="12" rx="3" fill="url(#uiNeon)" />
+    <rect x="250" y="45" width="25" height="6" rx="2" fill="#94a3b8" />
+    <rect x="285" y="45" width="25" height="6" rx="2" fill="#94a3b8" />
+    <rect x="320" y="45" width="25" height="6" rx="2" fill="#94a3b8" />
+    <rect x="355" y="42" width="30" height="12" rx="6" fill="#8b5cf6" />
+
+    <!-- Hero Headline & Description -->
+    <rect x="18" y="75" width="180" height="16" rx="4" fill="#ffffff" />
+    <rect x="18" y="98" width="140" height="10" rx="3" fill="#38bdf8" />
+    <rect x="18" y="116" width="160" height="6" rx="2" fill="#64748b" />
+    <rect x="18" y="128" width="130" height="6" rx="2" fill="#64748b" />
+    <rect x="18" y="148" width="65" height="18" rx="9" fill="url(#uiNeon)" />
+
+    <!-- UI Dashboard Charts on Right -->
+    <rect x="215" y="75" width="170" height="100" rx="8" fill="#141c3c" />
+    <!-- Gradient Analytics Graph -->
+    <path d="M230 155 Q 260 110, 290 135 T 370 100" fill="none" stroke="#00d2ff" stroke-width="3.5" stroke-linecap="round" />
+    <circle cx="370" cy="100" r="5" fill="#a855f7" />
+    <!-- Bar Chart Columns -->
+    <rect x="235" y="140" width="10" height="20" rx="2" fill="#8b5cf6" opacity="0.6" />
+    <rect x="255" y="125" width="10" height="35" rx="2" fill="#8b5cf6" opacity="0.8" />
+    <rect x="275" y="130" width="10" height="30" rx="2" fill="#8b5cf6" opacity="0.7" />
+    <rect x="295" y="115" width="10" height="45" rx="2" fill="#38bdf8" />
+    <rect x="315" y="110" width="10" height="50" rx="2" fill="#38bdf8" />
+
+    <!-- Feature Cards Row Bottom -->
+    <rect x="18" y="190" width="115" height="50" rx="6" fill="#141c3c" />
+    <circle cx="35" cy="215" r="10" fill="#8b5cf6" />
+    <rect x="55" y="208" width="65" height="6" rx="2" fill="#ffffff" />
+    <rect x="55" y="218" width="45" height="5" rx="2" fill="#38bdf8" />
+
+    <rect x="145" y="190" width="115" height="50" rx="6" fill="#141c3c" />
+    <circle cx="162" cy="215" r="10" fill="#00d2ff" />
+    <rect x="182" y="208" width="65" height="6" rx="2" fill="#ffffff" />
+    <rect x="182" y="218" width="45" height="5" rx="2" fill="#a855f7" />
+
+    <rect x="272" y="190" width="115" height="50" rx="6" fill="#141c3c" />
+    <circle cx="289" cy="215" r="10" fill="#10b981" />
+    <rect x="309" y="208" width="65" height="6" rx="2" fill="#ffffff" />
+    <rect x="309" y="218" width="45" height="5" rx="2" fill="#10b981" />
+  </g>
+
+  <!-- Mobile Smartphone Mockup (Overlapping Right) -->
+  <g transform="translate(430, 110)" filter="url(#uiShadow)">
+    <rect width="110" height="210" rx="18" fill="#0a0f22" stroke="url(#uiNeon)" stroke-width="2.5" />
+    <!-- Dynamic Island / Speaker -->
+    <rect x="38" y="8" width="34" height="6" rx="3" fill="#1e294b" />
+    <!-- Mobile App Content -->
+    <circle cx="55" cy="45" r="18" fill="url(#uiNeon)" />
+    <rect x="20" y="75" width="70" height="8" rx="2" fill="#ffffff" />
+    <rect x="25" y="88" width="60" height="6" rx="2" fill="#38bdf8" />
+    
+    <rect x="15" y="106" width="80" height="42" rx="6" fill="#172248" />
+    <path d="M22 135 L40 120 L60 130 L85 115" fill="none" stroke="#00d2ff" stroke-width="2" />
+
+    <rect x="15" y="156" width="80" height="20" rx="10" fill="#8b5cf6" />
+    <!-- Bottom Nav -->
+    <circle cx="30" cy="195" r="4" fill="#64748b" />
+    <circle cx="55" cy="195" r="4" fill="#00d2ff" />
+    <circle cx="80" cy="195" r="4" fill="#64748b" />
+  </g>
+
+  <!-- Badge Top Left -->
+  <rect x="25" y="25" width="195" height="30" rx="15" fill="rgba(19, 27, 52, 0.85)" stroke="url(#uiNeon)" stroke-width="1" />
+  <text x="122" y="44" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">PROJECT 06: WEBSITE UI</text>
+</svg>

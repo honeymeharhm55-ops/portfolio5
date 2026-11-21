@@ -1,0 +1,8 @@
+# robots.txt for Khuram Latif - Creative Graphic Designer Portfolio
+# Instructs search engines (Google, Bing, etc.) on how to crawl the portfolio
+
+User-agent: *
+Allow: /
+
+# Sitemap Location (Replace https://your-domain.com/ with your published live domain)
+Sitemap: https://your-domain.com/sitemap.xml
